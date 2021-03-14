@@ -1,6 +1,6 @@
-[1615688102.233][INFO]: Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 44521
-[1615688102.233][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-[1615688103.236][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND InitSession {
+[1615688558.458][INFO]: Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 49557
+[1615688558.458][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1615688559.460][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] COMMAND InitSession {
    "capabilities": {
       "alwaysMatch": {
          "browserName": "chrome",
@@ -28,9 +28,9 @@
       "version": ""
    }
 }
-[1615688103.236][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
-[1615688103.236][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
-[1615688103.237][INFO]: Populating Preferences file: {
+[1615688559.460][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
+[1615688559.460][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
+[1615688559.460][INFO]: Populating Preferences file: {
    "alternate_error_pages": {
       "enabled": false
    },
@@ -83,7 +83,7 @@
       "enabled": false
    }
 }
-[1615688103.237][INFO]: Populating Local State file: {
+[1615688559.460][INFO]: Populating Local State file: {
    "background_mode": {
       "enabled": false
    },
@@ -93,19 +93,19 @@
       }
    }
 }
-[1615688103.237][INFO]: Launching chrome: /usr/bin/google-chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --headless --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/tmp/.com.google.Chrome.Ox9DOM --window-size=1920,1080 data:,
-[1615688103.341][INFO]: resolved localhost to ["127.0.0.1"]
-[1615688103.347][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE InitSession {
+[1615688559.460][INFO]: Launching chrome: /usr/bin/google-chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --headless --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/tmp/.com.google.Chrome.a35CrI --window-size=1920,1080 data:,
+[1615688559.565][INFO]: resolved localhost to ["127.0.0.1"]
+[1615688559.570][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] RESPONSE InitSession {
    "capabilities": {
       "acceptInsecureCerts": false,
       "browserName": "chrome",
       "browserVersion": "87.0.4280.141",
       "chrome": {
          "chromedriverVersion": "87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761})",
-         "userDataDir": "/tmp/.com.google.Chrome.Ox9DOM"
+         "userDataDir": "/tmp/.com.google.Chrome.a35CrI"
       },
       "goog:chromeOptions": {
-         "debuggerAddress": "localhost:34401"
+         "debuggerAddress": "localhost:39821"
       },
       "networkConnectionEnabled": false,
       "pageLoadStrategy": "normal",
@@ -123,43 +123,31 @@
       "unhandledPromptBehavior": "dismiss and notify",
       "webauthn:virtualAuthenticators": true
    },
-   "sessionId": "1662e3785d80643b95c80aa6e6ce0a94"
+   "sessionId": "475d9643c9a4d534f32f539b1aab6bf4"
 }
-[1615688103.348][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND ExecuteCDP {
+[1615688559.572][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] COMMAND ExecuteCDP {
    "cmd": "Page.setDownloadBehavior",
    "params": {
       "behavior": "allow",
       "downloadPath": "./downloads.partial"
    }
 }
-[1615688103.348][INFO]: Waiting for pending navigations...
-[1615688103.349][INFO]: Done waiting for pending navigations. Status: ok
-[1615688103.349][INFO]: Waiting for pending navigations...
-[1615688103.350][INFO]: Done waiting for pending navigations. Status: ok
-[1615688103.350][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE ExecuteCDP {
+[1615688559.572][INFO]: Waiting for pending navigations...
+[1615688559.573][INFO]: Done waiting for pending navigations. Status: ok
+[1615688559.573][INFO]: Waiting for pending navigations...
+[1615688559.573][INFO]: Done waiting for pending navigations. Status: ok
+[1615688559.573][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] RESPONSE ExecuteCDP {
 
 }
-[1615688103.350][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND Navigate {
+[1615688559.574][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] COMMAND Navigate {
    "url": "https://repository.library.northeastern.edu//downloads/neu:m046mb58f?datastream_id=content"
 }
-[1615688103.350][INFO]: Waiting for pending navigations...
-[1615688103.350][INFO]: Done waiting for pending navigations. Status: ok
-[1615688103.889][INFO]: Waiting for pending navigations...
-[1615688103.890][INFO]: Done waiting for pending navigations. Status: ok
-[1615688103.890][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE Navigate
-[1615688104.896][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND Navigate {
-   "url": "https://repository.library.northeastern.edu//downloads/neu:m046mb74t?datastream_id=content"
+[1615688559.574][INFO]: Waiting for pending navigations...
+[1615688559.574][INFO]: Done waiting for pending navigations. Status: ok
+[1615688560.164][INFO]: Waiting for pending navigations...
+[1615688560.165][INFO]: Done waiting for pending navigations. Status: ok
+[1615688560.165][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] RESPONSE Navigate
+[1615688561.205][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] COMMAND Quit {
+
 }
-[1615688104.896][INFO]: Waiting for pending navigations...
-[1615688104.897][INFO]: Done waiting for pending navigations. Status: ok
-[1615688105.249][INFO]: Waiting for pending navigations...
-[1615688105.250][INFO]: Done waiting for pending navigations. Status: ok
-[1615688105.250][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE Navigate
-[1615688197.358][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND Navigate {
-   "url": "https://repository.library.northeastern.edu//downloads/neu:m046mb710?datastream_id=content"
-}
-[1615688197.359][INFO]: Waiting for pending navigations...
-[1615688197.360][INFO]: Done waiting for pending navigations. Status: ok
-[1615688197.628][INFO]: Waiting for pending navigations...
-[1615688197.629][INFO]: Done waiting for pending navigations. Status: ok
-[1615688197.629][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE Navigate
+[1615688561.255][INFO]: [475d9643c9a4d534f32f539b1aab6bf4] RESPONSE Quit

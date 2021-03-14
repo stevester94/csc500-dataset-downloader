@@ -44,7 +44,7 @@ class StevesDownloader:
         if starting_files != []:
             raise Exception("Partial downloads was not empty, it needs to be empty. Time to freak out.")
 
-        print("Beginning download")
+        print("Beginning download: ", url)
         self.driver.get(url)
 
         while True:
