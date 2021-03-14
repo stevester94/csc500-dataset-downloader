@@ -1,0 +1,165 @@
+[1615688102.233][INFO]: Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 44521
+[1615688102.233][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1615688103.236][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND InitSession {
+   "capabilities": {
+      "alwaysMatch": {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--headless", "--window-size=1920,1080" ],
+            "excludeSwitches": [ "enable-automation" ],
+            "extensions": [  ],
+            "useAutomationExtension": false
+         },
+         "platformName": "any"
+      },
+      "firstMatch": [ {
+
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--headless", "--window-size=1920,1080" ],
+         "excludeSwitches": [ "enable-automation" ],
+         "extensions": [  ],
+         "useAutomationExtension": false
+      },
+      "platform": "ANY",
+      "version": ""
+   }
+}
+[1615688103.236][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
+[1615688103.236][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
+[1615688103.237][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1615688103.237][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1615688103.237][INFO]: Launching chrome: /usr/bin/google-chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --headless --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/tmp/.com.google.Chrome.Ox9DOM --window-size=1920,1080 data:,
+[1615688103.341][INFO]: resolved localhost to ["127.0.0.1"]
+[1615688103.347][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "87.0.4280.141",
+      "chrome": {
+         "chromedriverVersion": "87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761})",
+         "userDataDir": "/tmp/.com.google.Chrome.Ox9DOM"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:34401"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "linux",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "1662e3785d80643b95c80aa6e6ce0a94"
+}
+[1615688103.348][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND ExecuteCDP {
+   "cmd": "Page.setDownloadBehavior",
+   "params": {
+      "behavior": "allow",
+      "downloadPath": "./downloads.partial"
+   }
+}
+[1615688103.348][INFO]: Waiting for pending navigations...
+[1615688103.349][INFO]: Done waiting for pending navigations. Status: ok
+[1615688103.349][INFO]: Waiting for pending navigations...
+[1615688103.350][INFO]: Done waiting for pending navigations. Status: ok
+[1615688103.350][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE ExecuteCDP {
+
+}
+[1615688103.350][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND Navigate {
+   "url": "https://repository.library.northeastern.edu//downloads/neu:m046mb58f?datastream_id=content"
+}
+[1615688103.350][INFO]: Waiting for pending navigations...
+[1615688103.350][INFO]: Done waiting for pending navigations. Status: ok
+[1615688103.889][INFO]: Waiting for pending navigations...
+[1615688103.890][INFO]: Done waiting for pending navigations. Status: ok
+[1615688103.890][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE Navigate
+[1615688104.896][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND Navigate {
+   "url": "https://repository.library.northeastern.edu//downloads/neu:m046mb74t?datastream_id=content"
+}
+[1615688104.896][INFO]: Waiting for pending navigations...
+[1615688104.897][INFO]: Done waiting for pending navigations. Status: ok
+[1615688105.249][INFO]: Waiting for pending navigations...
+[1615688105.250][INFO]: Done waiting for pending navigations. Status: ok
+[1615688105.250][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE Navigate
+[1615688197.358][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] COMMAND Navigate {
+   "url": "https://repository.library.northeastern.edu//downloads/neu:m046mb710?datastream_id=content"
+}
+[1615688197.359][INFO]: Waiting for pending navigations...
+[1615688197.360][INFO]: Done waiting for pending navigations. Status: ok
+[1615688197.628][INFO]: Waiting for pending navigations...
+[1615688197.629][INFO]: Done waiting for pending navigations. Status: ok
+[1615688197.629][INFO]: [1662e3785d80643b95c80aa6e6ce0a94] RESPONSE Navigate

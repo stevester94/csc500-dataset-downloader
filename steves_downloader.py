@@ -9,12 +9,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
-download_target="https://repository.library.northeastern.edu/downloads/neu:m046mb27f?datastream_id=content"
 
 class StevesDownloader:
     def __init__(self, 
-        finished_download_path="downloads", 
-        partial_download_path="downloads.partial", 
+        finished_download_path,
+        partial_download_path,
         log_path="./steves_downloader.log"):
 
         self.finished_download_path = finished_download_path
@@ -44,8 +43,6 @@ class StevesDownloader:
 
         if starting_files != []:
             raise Exception("Partial downloads was not empty, it needs to be empty. Time to freak out.")
-
-        print(starting_files)
 
         print("Beginning download")
         self.driver.get(url)
@@ -86,10 +83,17 @@ class StevesDownloader:
 
 
 
-
+# Usage is <partial download path> <finished download path> <download list>
 if __name__ == "__main__":
-    downloader = StevesDownloader()
-    downloader.synchronous_download(download_target)
+    download_urls = []
+    with open(sys.argv[3], "r") as f:
+        download_urls = [l.rstrip() for l in f]
+    print("will download ", len(download_urls), " files")
+    input("Press enter to continue ")
+    downloader = StevesDownloader(partial_download_path=sys.argv[1], finished_download_path=sys.argv[2])
+
+    for u in download_urls:
+        downloader.synchronous_download(u)
 
     downloader=None
     sys.exit(0)
