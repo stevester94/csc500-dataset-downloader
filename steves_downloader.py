@@ -9,12 +9,20 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
+CHROME_LOG_PATH="./steves_downloader.chrome.log"
+LOG_PATH="./steves_downloader.log"
+
+def log(*args):
+    print(*args)
+    with open(LOG_PATH, "a") as f:
+        print(*args, file=f)
+    
+
 
 class StevesDownloader:
     def __init__(self, 
         finished_download_path,
-        partial_download_path,
-        log_path="./steves_downloader.log"):
+        partial_download_path):
 
         self.finished_download_path = finished_download_path
         self.partial_download_path  = partial_download_path
@@ -24,14 +32,14 @@ class StevesDownloader:
         options.add_argument("--window-size=1920,1080")
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option('useAutomationExtension', False)
-        self.driver = webdriver.Chrome(options=options, service_args=["--log-path="+log_path])
+        self.driver = webdriver.Chrome(options=options, service_args=["--log-path="+CHROME_LOG_PATH])
         params = {'behavior': 'allow', 'downloadPath': self.partial_download_path}
         self.driver.execute_cdp_cmd('Page.setDownloadBehavior', params)
 
-        print ("Headless Chrome Initialized")
+        log("Headless Chrome Initialized")
     
     def __del__(self):
-        print("StevesDownloader destructing")
+        log("StevesDownloader destructing")
         self.driver.quit()
 
     def get_files_in_path(self, path):
@@ -44,7 +52,7 @@ class StevesDownloader:
         if starting_files != []:
             raise Exception("Partial downloads was not empty, it needs to be empty. Time to freak out.")
 
-        print("Beginning download: ", url)
+        log("Beginning download: ", url)
         self.driver.get(url)
 
         while True:
@@ -65,9 +73,9 @@ class StevesDownloader:
             else:
                 sleep(1)
 
-        print("Download Finished")
+        log("Download Finished")
 
-        print("Moving files to completed downloads")
+        log("Moving files to completed downloads")
 
         for f in self.get_files_in_path(self.partial_download_path):
             src  = os.path.join(self.partial_download_path, f)
@@ -76,10 +84,10 @@ class StevesDownloader:
             if os.path.exists(dest):
                 raise Exception("Destination of "+dest+" already exists. Time to freak out.")
 
-            print("Move ", src, " => ", dest)
+            log("Move ", src, " => ", dest)
 
             os.rename(src, dest)
-        print("Complete")
+        log("Download Complete: ", url)
 
 
 
